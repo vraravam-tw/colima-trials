@@ -1,0 +1,6 @@
+-- Note:
+--   1. All files in this folder will only get evaluated if there is currently no db-metadata files existing. So, when this file executes, we need not explicitly call out to "DROP DATABASE"
+--       DROP DATABASE "service-api";
+--   2. The postgres docker image will create the db schema if one doesn't exist at app startup, so no need of explicitly using "CREATE DATABASE" stmt like so
+--       CREATE DATABASE "service-api" owner postgres;
+--   3. We need not explicitly call out any specific sql stmt to import any data file. When starting up, all files with the extn ".sql" will be evaluated in alphabetical order (so remember to name them correctly!)
